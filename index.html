@@ -148,6 +148,13 @@ h2.big{font-size:clamp(28px,4vw,44px);text-align:center}
 .placeholder{border:1.5px dashed var(--sage);border-radius:14px;background:#F1F5EE;padding:16px 18px;color:var(--sage-deep);font-size:14px;font-weight:600;margin-top:18px}
 @media(max-width:800px){.story{grid-template-columns:1fr;gap:28px}}
 
+/* prose (story / why) */
+.prose h2{font-size:clamp(26px,3.4vw,38px);margin:14px 0 18px}
+.prose p{font-size:17px;color:var(--ink-soft);margin:0 0 16px;line-height:1.7}
+.prose .qlist{list-style:none;margin:4px 0 22px;padding:0;display:flex;flex-direction:column;gap:9px}
+.prose .qlist li{font-family:'Fraunces',Georgia,serif;font-size:clamp(18px,2.2vw,22px);color:var(--teal-deep);padding-left:26px;position:relative;line-height:1.35}
+.prose .qlist li::before{content:"?";position:absolute;left:0;top:0;font-family:'Manrope';font-weight:800;color:var(--orange)}
+
 /* quote */
 .quote{background:var(--peach-tint);border:1px solid var(--peach);border-radius:var(--radius);padding:40px;text-align:center;box-shadow:var(--shadow-sm)}
 .quote p{font-family:'Fraunces';font-style:italic;font-size:clamp(20px,2.6vw,27px);color:var(--teal-deep);line-height:1.4}
@@ -184,7 +191,8 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
     <nav class="topnav">
       <a href="#inside">The cookbook</a>
       <a href="#app">The app</a>
-      <a href="#story">Why we made this</a>
+      <a href="#story">Our story</a>
+      <a href="#why">Why we made this</a>
       <a href="#get" class="btn primary">Free cookbook</a>
     </nav>
   </div>
@@ -208,7 +216,7 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
         <button class="btn primary" type="submit">Send me the free cookbook (PDF)</button>
       </form>
       <div class="thanks" id="heroThanks">Yes! Your cookbook PDF is on its way to your inbox. You're not doing this alone anymore. 🌶️</div>
-      <div class="microcopy">✦ Free PDF · 84 real family recipes · The resource no one handed you</div>
+      <div class="microcopy">✦ Free PDF · 112 real family recipes · The resource no one handed you</div>
 
       <div class="trustline"><span class="av">💛</span> Created by parents living T1D + neurospicy life every day. Not a clinic.</div>
     </div>
@@ -230,7 +238,7 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
 <section class="band">
   <div class="wrap narrow rv">
     <div class="moment">
-      <p>It's 4:45pm. Dinner has to be carb-counted for the insulin <em>and</em> be a safe food they'll actually eat. You've tried the healthy-family blogs, the clinical diabetes books, and Googling combinations that just don't exist.
+      <p>It's 5.30pm. You are yet to work out dinner and need to ensure dinner will be food they'll actually eat so the correct carb calculation can be factored in for the right insulin dose.<br><br>You've tried the healthy-family blogs, the clinical diabetes books, and Googling combinations that just don't exist.
       <span class="q">And underneath it all, the same quiet disbelief: how is there nothing for families like mine?</span></p>
     </div>
   </div>
@@ -251,9 +259,9 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
     <div class="seclabel rv"><span class="ln"></span><span>Inside the free cookbook</span><span class="ln"></span></div>
     <h2 class="big rv">Real meals, minus the mental load</h2>
     <div class="features">
-      <div class="fcard rv"><div class="ic i-orange">🧮</div><h3>Carbs already counted</h3><p>Every recipe shows the carbs per serve, so the insulin maths is done before you even start cooking.</p></div>
+      <div class="fcard rv"><div class="ic i-orange">🧮</div><h3>Carbs already counted</h3><p>Every recipe shows the approximate carbs per serve, so the insulin maths is done before you even start cooking.</p></div>
       <div class="fcard rv" style="transition-delay:.06s"><div class="ic i-teal">🍽️</div><h3>Foods they'll actually eat</h3><p>Neurospicy-friendly and safe-food aware. Familiar, unscary meals, so dinner stops being a standoff.</p></div>
-      <div class="fcard rv" style="transition-delay:.12s"><div class="ic i-sage">📖</div><h3>84 real family meals</h3><p>Breakfasts, lunchbox snacks, quick dinners, slow-cooker dump bags. Real food for real, busy days.</p></div>
+      <div class="fcard rv" style="transition-delay:.12s"><div class="ic i-sage">📖</div><h3>112 real family meals</h3><p>Breakfasts, lunchbox snacks, weeknight dinners, slow-cooker dump bags, homemade pizza and sweet treats. Real food for real, busy days.</p></div>
       <div class="fcard rv" style="transition-delay:.18s"><div class="ic i-mustard">🧠</div><h3>Made to be low-friction</h3><p>Dopamine-friendly by design, so a tired, overloaded brain can actually pick something and go.</p></div>
     </div>
   </div>
@@ -293,18 +301,45 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
 
 <!-- STORY -->
 <section class="band" id="story" style="background:var(--cream-deep)">
-  <div class="wrap story">
-    <div class="rv">
-      <div class="portrait">
-        <div class="ph"><span class="big">🌶️</span>From one family<br>to yours<br><span style="opacity:.85">real meals, real days</span></div>
-      </div>
-    </div>
-    <div class="rv" style="transition-delay:.1s">
-      <div class="seclabel" style="justify-content:flex-start"><span>This isn't a brand. It's a family.</span></div>
-      <h2>We built this because no one built it for us.</h2>
-      <p class="body">We live it. Type 1 Diabetes and a neurospicy household are our every single day, not a case study. When the appointments ended and the resources never came, we started building the meals, the carb counts and the shortcuts our own family needed, and turned them into something we could hand to the next parent standing at the same fridge.</p>
-      <div class="placeholder">✎ Our story, in our own words, goes here - why we started, what changed, how far we've come. (Shared without naming names.)</div>
-    </div>
+  <div class="wrap narrow prose rv">
+    <div class="seclabel" style="justify-content:flex-start"><span class="ln"></span><span>Our story</span></div>
+    <h2>Our story</h2>
+    <p>When our child was diagnosed with Type 1 Diabetes, we were completely shocked. She was the first person in both sides of our family to receive a Type 1 Diabetes diagnosis, so we had no family experience to draw on and very little idea of what everyday life with Type 1 Diabetes would actually look like.</p>
+    <p>The amount of information we were given was overwhelming, but it was when we arrived home from hospital that the reality really hit us.</p>
+    <p>We were discharged late one afternoon and, within an hour of getting home, we were expected to work out dinner, calculate the carbohydrates and somehow put everything we had just learned into practice.</p>
+    <p>Suddenly, something as simple as preparing dinner felt like a huge task.</p>
+    <p>We were learning on the go, trying to understand carbohydrates, portions, meals, snacks, routines and all the little decisions that come with managing Type 1 Diabetes, while also trying to support our child emotionally.</p>
+    <p>We did our best. We learned as we went, made mistakes, asked questions and slowly found our way through the overwhelming early days.</p>
+    <p>But along the way, we realised something important. A guide that could be picked up whenever we needed it, something practical, simple and easy to understand, would have made those everyday moments so much easier.</p>
+    <p>This was not just something we needed as parents, our teenage daughter needed something that could help her understand food, carbohydrates and meal preparation in a way that felt achievable and empowering, rather than overwhelming.</p>
+    <p>That is where the idea for The Everyday T1D and ADHD Cookbook began.</p>
+    <p>This cookbook was created from the perspective of a family living the everyday reality of Type 1 Diabetes and ADHD. It is designed to make food feel less complicated, meal planning less stressful and cooking something the whole family can be involved in.</p>
+    <p>Because sometimes, you don't need another complicated guide, you just need someone to say, "here's an easy place to start".</p>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="band" id="why" style="padding-top:20px">
+  <div class="wrap narrow prose rv">
+    <div class="dots" style="margin-bottom:18px"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span><span class="d6"></span></div>
+    <h2>Why we created this book</h2>
+    <p>We created The Everyday T1D and ADHD Cookbook because we know how overwhelming food can become when you are learning to live with Type 1 Diabetes and ADHD.</p>
+    <p>Food is something we deal with every single day, yet after a diagnosis, something as simple as deciding what to have for dinner can suddenly feel complicated.</p>
+    <ul class="qlist">
+      <li>How many carbohydrates are in it?</li>
+      <li>Will my teenager actually eat it?</li>
+      <li>How do I make something quick when everyone is tired?</li>
+      <li>What can I pack for school?</li>
+      <li>What can we grab when we're running late?</li>
+      <li>And how do we make meals feel normal again?</li>
+    </ul>
+    <p>We wanted to create the guide we wished we had when we first came home from hospital.</p>
+    <p>A cookbook that doesn't expect perfection. A cookbook filled with practical, family-friendly recipes that are easy to follow, realistic for busy Australian families and suitable for teenagers who may find planning, organisation and decision-making challenging.</p>
+    <p>Most importantly, we wanted to create something that could help teenagers become more confident and independent with food, while giving parents a little less to think about.</p>
+    <p>This isn't about creating perfect meals or getting everything right every time. It's about making everyday food easier. It's about having recipes you can come back to when you're tired, overwhelmed or simply don't know what to cook.</p>
+    <p>It's about taking some of the guesswork out of meals and making room for what really matters - family, confidence, connection and enjoying food together.</p>
+    <p>We hope this book becomes more than just a collection of recipes. We hope it becomes a little helping hand in your kitchen, a place to find ideas when you're stuck, and a reminder that you don't have to figure it all out alone.</p>
+    <div style="margin-top:26px"><a href="#get" class="btn primary">Send me the free cookbook (PDF)</a></div>
   </div>
 </section>
 
@@ -341,8 +376,8 @@ footer .fine{margin-top:16px;font-size:12.5px;opacity:.6}
 <footer>
   <div class="wrap">
     <div class="brand"><span class="chip">🌶️</span> Sweet &amp; Spicy Minds</div>
-    <p>Real meals for families living with Type 1 Diabetes and neurospicy minds. Made with love by parents living it, one fridge-staring 4:45pm at a time.</p>
-    <p class="fine">© <span id="yr"></span> Sweet &amp; Spicy Minds · Draft landing page</p>
+    <p>Real meals for families living with Type 1 Diabetes and neurospicy minds. Made with love by parents living it, one fridge-staring 5.30pm at a time.</p>
+    <p class="fine">© <span id="yr"></span> Sweet &amp; Spicy Minds</p>
   </div>
 </footer>
 
